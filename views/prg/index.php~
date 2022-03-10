@@ -139,7 +139,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'materia',
 			    'value' => function ($model) {
 			        if ($rel = $model->materia0) {
-			            return Html::a($rel->materia_id, ['materia/view', 'materia_id' => $rel->materia_id,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['materia/view', 'materia_id' => $rel->materia_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }
@@ -152,7 +152,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'catedra',
 			    'value' => function ($model) {
 			        if ($rel = $model->catedra0) {
-			            return Html::a($rel->catedra_id, ['catedra/view', 'catedra_id' => $rel->catedra_id,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['catedra/view', 'catedra_id' => $rel->catedra_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }
@@ -165,7 +165,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'plan',
 			    'value' => function ($model) {
 			        if ($rel = $model->plan0) {
-			            return Html::a($rel->plan_id, ['plan/view', 'plan_id' => $rel->plan_id,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['plan/view', 'plan_id' => $rel->plan_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }

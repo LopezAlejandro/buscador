@@ -1,0 +1,114 @@
+{
+    "tablename": {
+        "value": "materia",
+        "name": "tableName"
+    },
+    "tableprefix": {
+        "value": "",
+        "name": "tablePrefix"
+    },
+    "modelclass": {
+        "value": "Materia",
+        "name": "modelClass"
+    },
+    "ns": {
+        "value": "app\\models",
+        "name": "ns"
+    },
+    "baseclass": {
+        "value": "yii\\db\\ActiveRecord",
+        "name": "baseClass"
+    },
+    "db": {
+        "value": "db",
+        "name": "db"
+    },
+    "generaterelations": {
+        "value": "all",
+        "name": "generateRelations"
+    },
+    "generatejunctionrelationmode": {
+        "value": "table",
+        "name": "generateJunctionRelationMode"
+    },
+    "generatelabelsfromcomments": {
+        "value": "0",
+        "name": "generateLabelsFromComments"
+    },
+    "generatehintsfromcomments": {
+        "value": "1",
+        "name": "generateHintsFromComments"
+    },
+    "generatemodelclass": {
+        "value": "0",
+        "name": "generateModelClass"
+    },
+    "generatequery": {
+        "value": "1",
+        "name": "generateQuery"
+    },
+    "queryns": {
+        "value": "app\\models",
+        "name": "queryNs"
+    },
+    "queryclass": {
+        "value": "MateriaQuery",
+        "name": "queryClass"
+    },
+    "querybaseclass": {
+        "value": "yii\\db\\ActiveQuery",
+        "name": "queryBaseClass"
+    },
+    "enablei18n": {
+        "value": "0",
+        "name": "enableI18N"
+    },
+    "singularentities": {
+        "value": "0",
+        "name": "singularEntities"
+    },
+    "messagecategory": {
+        "value": "models",
+        "name": "messageCategory"
+    },
+    "usetranslatablebehavior": {
+        "value": "0",
+        "name": "useTranslatableBehavior"
+    },
+    "languagetablename": {
+        "value": "{{table}}_lang",
+        "name": "languageTableName"
+    },
+    "languagecodecolumn": {
+        "value": "language",
+        "name": "languageCodeColumn"
+    },
+    "useblameablebehavior": {
+        "value": "0",
+        "name": "useBlameableBehavior"
+    },
+    "createdbycolumn": {
+        "value": "",
+        "name": "createdByColumn"
+    },
+    "updatedbycolumn": {
+        "value": "",
+        "name": "updatedByColumn"
+    },
+    "usetimestampbehavior": {
+        "value": "0",
+        "name": "useTimestampBehavior"
+    },
+    "createdatcolumn": {
+        "value": "",
+        "name": "createdAtColumn"
+    },
+    "updatedatcolumn": {
+        "value": "",
+        "name": "updatedAtColumn"
+    },
+    "timestampbehaviorclass": {
+        "value": "yii\\behaviors\\TimestampBehavior",
+        "name": "timestampBehaviorClass"
+    }
+}

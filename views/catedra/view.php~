@@ -203,7 +203,7 @@ $this->params['breadcrumbs'][] = 'View';
     'class' => yii\grid\DataColumn::className(),
     'attribute' => 'plan',
     'value' => function ($model) {
-        if ($rel = $model->plan0) {
+        if ($rel = $model->plan) {
             return Html::a($rel->plan_id, ['plan/view', 'plan_id' => $rel->plan_id,], ['data-pjax' => 0]);
         } else {
             return '';

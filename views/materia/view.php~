@@ -167,7 +167,7 @@ $this->params['breadcrumbs'][] = 'View';
     'attribute' => 'carrera',
     'value' => function ($model) {
         if ($rel = $model->carrera0) {
-            return Html::a($rel->carrera_id, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
+            return Html::a($rel->nombre, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
         } else {
             return '';
         }
@@ -240,7 +240,7 @@ $this->params['breadcrumbs'][] = 'View';
     'attribute' => 'carrera',
     'value' => function ($model) {
         if ($rel = $model->carrera0) {
-            return Html::a($rel->carrera_id, ['carrera/view', 'carrera_id' => $rel->nombre,], ['data-pjax' => 0]);
+            return Html::a($rel->nombre, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
         } else {
             return '';
         }
@@ -252,8 +252,8 @@ $this->params['breadcrumbs'][] = 'View';
     'class' => yii\grid\DataColumn::className(),
     'attribute' => 'catedra',
     'value' => function ($model) {
-        if ($rel = $model->catedra) {
-            return Html::a($rel->catedra_id, ['catedra/view', 'catedra_id' => $rel->catedra_id], ['data-pjax' => 0]);
+        if ($rel = $model->catedra0) {
+            return Html::a($rel->catedra_id, ['catedra/view', 'catedra_id' => $rel->catedra_id,], ['data-pjax' => 0]);
         } else {
             return '';
         }
@@ -265,8 +265,8 @@ $this->params['breadcrumbs'][] = 'View';
     'class' => yii\grid\DataColumn::className(),
     'attribute' => 'plan',
     'value' => function ($model) {
-        if ($rel = $model->plan) {
-            return Html::a($rel->plan_id, ['plan/view', 'plan_id' => $rel->nombre,], ['data-pjax' => 0]);
+        if ($rel = $model->plan0) {
+            return Html::a($rel->plan_id, ['plan/view', 'plan_id' => $rel->plan_id,], ['data-pjax' => 0]);
         } else {
             return '';
         }

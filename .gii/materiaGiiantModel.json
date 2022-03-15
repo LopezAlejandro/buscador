@@ -4,7 +4,7 @@
         "name": "tableName"
     },
     "tableprefix": {
-        "value": "",
+        "value": null,
         "name": "tablePrefix"
     },
     "modelclass": {
@@ -32,19 +32,19 @@
         "name": "generateJunctionRelationMode"
     },
     "generatelabelsfromcomments": {
-        "value": "0",
+        "value": false,
         "name": "generateLabelsFromComments"
     },
     "generatehintsfromcomments": {
-        "value": "1",
+        "value": true,
         "name": "generateHintsFromComments"
     },
     "generatemodelclass": {
-        "value": "0",
+        "value": false,
         "name": "generateModelClass"
     },
     "generatequery": {
-        "value": "1",
+        "value": false,
         "name": "generateQuery"
     },
     "queryns": {
@@ -52,7 +52,7 @@
         "name": "queryNs"
     },
     "queryclass": {
-        "value": "MateriaQuery",
+        "value": "",
         "name": "queryClass"
     },
     "querybaseclass": {
@@ -60,11 +60,11 @@
         "name": "queryBaseClass"
     },
     "enablei18n": {
-        "value": "0",
+        "value": false,
         "name": "enableI18N"
     },
     "singularentities": {
-        "value": "0",
+        "value": false,
         "name": "singularEntities"
     },
     "messagecategory": {
@@ -72,7 +72,7 @@
         "name": "messageCategory"
     },
     "usetranslatablebehavior": {
-        "value": "0",
+        "value": true,
         "name": "useTranslatableBehavior"
     },
     "languagetablename": {
@@ -84,27 +84,27 @@
         "name": "languageCodeColumn"
     },
     "useblameablebehavior": {
-        "value": "0",
+        "value": true,
         "name": "useBlameableBehavior"
     },
     "createdbycolumn": {
-        "value": "",
+        "value": "created_by",
         "name": "createdByColumn"
     },
     "updatedbycolumn": {
-        "value": "",
+        "value": "updated_by",
         "name": "updatedByColumn"
     },
     "usetimestampbehavior": {
-        "value": "0",
+        "value": true,
         "name": "useTimestampBehavior"
     },
     "createdatcolumn": {
-        "value": "",
+        "value": "created_at",
         "name": "createdAtColumn"
     },
     "updatedatcolumn": {
-        "value": "",
+        "value": "updated_at",
         "name": "updatedAtColumn"
     },
     "timestampbehaviorclass": {

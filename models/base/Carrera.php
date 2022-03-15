@@ -77,15 +77,6 @@ abstract class Carrera extends \yii\db\ActiveRecord
     }
 
 
-    
-    /**
-     * @inheritdoc
-     * @return \app\models\CarreraQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new \app\models\CarreraQuery(get_called_class());
-    }
 
 
 }

@@ -58,7 +58,7 @@ return $dataProvider;
 
 $query->andFilterWhere([
             'prg_id' => $this->prg_id,
-  //          'carrera' => $this->carrera,
+            'carrera' => $this->carrera,
             'materia' => $this->materia,
             'catedra' => $this->catedra,
             'plan' => $this->plan,

@@ -84,15 +84,6 @@ abstract class Catedra extends \yii\db\ActiveRecord
     }
 
 
-    
-    /**
-     * @inheritdoc
-     * @return \app\models\CatedraQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new \app\models\CatedraQuery(get_called_class());
-    }
 
 
 }

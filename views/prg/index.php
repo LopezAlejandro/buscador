@@ -39,7 +39,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
     </h1>
     <div class="clearfix crud-navigation">
         <div class="pull-left">
-            <?= Html::a('<span class="glyphicon glyphicon-plus"></span> ' . 'New', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('<span class="glyphicon glyphicon-plus"></span> ' . 'Nuevo', ['create'], ['class' => 'btn btn-success']) ?>
         </div>
 
         <div class="pull-right">
@@ -126,7 +126,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'carrera',
 			    'value' => function ($model) {
 			        if ($rel = $model->carrera0) {
-			            return Html::a($rel->nombre, ['carrera/view', 'carrera_id' => $rel->nombre,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }

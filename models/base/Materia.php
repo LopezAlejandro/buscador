@@ -81,15 +81,6 @@ abstract class Materia extends \yii\db\ActiveRecord
     }
 
 
-    
-    /**
-     * @inheritdoc
-     * @return \app\models\MateriaQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new \app\models\MateriaQuery(get_called_class());
-    }
 
 
 }

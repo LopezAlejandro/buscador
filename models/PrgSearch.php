@@ -18,9 +18,9 @@ class PrgSearch extends Prg
 public function rules()
 {
 return [
-[['prg_id', 'materia', 'catedra', 'plan', 'vale_desde', 'vale_hasta', 'activo'], 'integer'],
-[['carrera'],'string'],
-            [['archivo'], 'safe'],
+[['prg_id'], 'integer'],
+[['carrera','materia','catedra','plan'],'string'],
+            
 ];
 }
 
@@ -42,7 +42,10 @@ return Model::scenarios();
 */
 public function search($params)
 {
-$query = Prg::find()->joinWith('carrera0');
+$query = Prg::find()->joinWith('carrera0')
+					     ->joinWith('materia0')
+					     ->joinWith('catedra0')
+					     ->joinWith('plan0');
 
 $dataProvider = new ActiveDataProvider([
 'query' => $query,
@@ -59,16 +62,19 @@ return $dataProvider;
 $query->andFilterWhere([
             'prg_id' => $this->prg_id,
   //          'carrera' => $this->carrera,
-            'materia' => $this->materia,
-            'catedra' => $this->catedra,
-            'plan' => $this->plan,
+  //          'materia' => $this->materia,
+  //          'catedra' => $this->catedra,
+ //           'plan' => $this->plan,
  //           'vale_desde' => $this->vale_desde,
  //           'vale_hasta' => $this->vale_hasta,
  //           'activo' => $this->activo,
         ]);
 
         $query->andFilterWhere(['like', 'archivo', $this->archivo])
-       		  ->andFilterWhere(['like', 'carrera.nombre', $this->carrera]);
+       		  ->andFilterWhere(['like', 'carrera.nombre', $this->carrera])
+       		  ->andFilterWhere(['like', 'materia.nombre', $this->materia])
+       		  ->andFilterWhere(['like', 'catedra.nombre', $this->catedra])
+       		  ->andFilterWhere(['like', 'plan.nombre', $this->plan]);
 
 return $dataProvider;
 }

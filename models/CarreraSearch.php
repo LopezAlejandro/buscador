@@ -20,6 +20,7 @@ public function rules()
 return [
 [['carrera_id'], 'integer'],
             [['nombre'], 'safe'],
+            [['sigla'], 'safe'],
 ];
 }
 

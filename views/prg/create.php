@@ -7,7 +7,7 @@ use yii\helpers\Html;
 * @var app\models\Prg $model
 */
 
-$this->title = Yii::t('models', 'Prg');
+$this->title = Yii::t('models', 'Programas');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('models', 'Prgs'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>
                 <?= Html::encode($model->prg_id) ?>
         <small>
-            <?= Yii::t('models', 'Prg') ?>
+            <?= Yii::t('models', 'Programas') ?>
         </small>
     </h1>
 

@@ -20,6 +20,7 @@ use yii\widgets\ActiveForm;
     		<?= $form->field($model, 'carrera_id') ?>
 
 		<?= $form->field($model, 'nombre') ?>
+		<?= $form->field($model, 'sigla') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

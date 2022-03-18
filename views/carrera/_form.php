@@ -42,6 +42,7 @@ use yii\helpers\StringHelper;
 
 <!-- attribute nombre -->
 			<?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
+			<?= $form->field($model, 'sigla')->textInput(['maxlength' => true]) ?>
         </p>
         <?php $this->endBlock(); ?>
         

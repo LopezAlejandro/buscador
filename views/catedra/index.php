@@ -122,7 +122,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'carrera',
 			    'value' => function ($model) {
 			        if ($rel = $model->carrera0) {
-			            return Html::a($rel->carrera_id, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['carrera/view', 'carrera_id' => $rel->carrera_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }
@@ -135,7 +135,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
 			    'attribute' => 'materia',
 			    'value' => function ($model) {
 			        if ($rel = $model->materia0) {
-			            return Html::a($rel->materia_id, ['materia/view', 'materia_id' => $rel->materia_id,], ['data-pjax' => 0]);
+			            return Html::a($rel->nombre, ['materia/view', 'materia_id' => $rel->materia_id,], ['data-pjax' => 0]);
 			        } else {
 			            return '';
 			        }

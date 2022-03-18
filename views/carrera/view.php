@@ -80,6 +80,7 @@ $this->params['breadcrumbs'][] = 'View';
     'model' => $model,
     'attributes' => [
             'nombre',
+            'sigla',
     ],
     ]);
   ?>

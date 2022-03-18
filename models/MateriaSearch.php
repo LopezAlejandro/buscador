@@ -18,8 +18,8 @@ class MateriaSearch extends Materia
 public function rules()
 {
 return [
-[['materia_id', 'carrera'], 'integer'],
-            [['nombre'], 'safe'],
+[['materia_id'], 'integer'],
+[['carrera'],'string'],
 ];
 }
 
@@ -41,7 +41,7 @@ return Model::scenarios();
 */
 public function search($params)
 {
-$query = Materia::find();
+$query = Materia::find()->joinWith('carrera0');
 
 $dataProvider = new ActiveDataProvider([
 'query' => $query,
@@ -57,10 +57,10 @@ return $dataProvider;
 
 $query->andFilterWhere([
             'materia_id' => $this->materia_id,
-            'carrera' => $this->carrera,
+  //          'carrera' => $this->carrera,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre', $this->nombre]);
+        $query->andFilterWhere(['like', 'carrera.nombre', $this->carrera]);
 
 return $dataProvider;
 }

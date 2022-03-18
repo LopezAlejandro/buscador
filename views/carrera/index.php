@@ -117,6 +117,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
             'contentOptions' => ['nowrap'=>'nowrap']
         ],
 			'nombre',
+			'sigla',
                 ]
         ]); ?>
     </div>

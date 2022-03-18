@@ -31,4 +31,11 @@ class Carrera extends BaseCarrera
             ]
         );
     }
+    
+    public function beforeSave($insert)
+	 {
+	    // hash password on before saving the record:
+		$this->sigla = strtoupper($this->sigla);
+		return parent::beforeSave($insert);
+	 }
 }

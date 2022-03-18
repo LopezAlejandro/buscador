@@ -37,7 +37,8 @@ abstract class Carrera extends \yii\db\ActiveRecord
     {
         return [
             [['nombre'], 'required'],
-            [['nombre'], 'string', 'max' => 100]
+            [['nombre'], 'string', 'max' => 100],
+            [['sigla'],'string','max'=>5]
         ];
     }
 
@@ -49,6 +50,7 @@ abstract class Carrera extends \yii\db\ActiveRecord
         return [
             'carrera_id' => 'Carrera ID',
             'nombre' => 'Nombre',
+            'sigla' => 'Abreviatura',
         ];
     }
 

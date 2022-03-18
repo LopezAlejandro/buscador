@@ -5,7 +5,7 @@
 namespace app\controllers\base;
 
 use app\models\Prg;
-    use app\models\PrgSearch;
+  use app\models\PrgSearch;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\Url;
@@ -102,6 +102,45 @@ return $this->render('update', [
 'model' => $model,
 ]);
 }
+}
+/*
+public function actionDownload($prg_id)
+{
+$model = $this->findModel($prg_id);
+header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+header('Content-Description: File Transfer');
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename='.$model->archivo);
+return \Yii::$app->response->sendFile('/srv/http/buscar/files/',$model->archivo);
+}
+*/
+public function actionDownload($prg_id)
+{
+
+		$model = $this->findModel($prg_id);
+		$src = "/srv/http/buscar/files/".$model->archivo;
+		if(@file_exists($src)) {
+			$path_parts = @pathinfo($src);
+			$filename = $model->carrera0->sigla.' - '.$model->materia0->nombre.' - '.$model->catedra0->nombre.' - '.$model->archivo;
+			//$mime = $this->__get_mime($path_parts['extension']);
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			//header('Content-Type: '.$mime);
+			header('Content-Disposition: attachment; filename= '.$filename);
+			header('Content-Transfer-Encoding: binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($src));
+			ob_clean();
+			flush();
+			readfile($src);
+
+		} else {
+
+			header("HTTP/1.0 404 Not Found");
+			exit();
+		}
 }
 
 /**
